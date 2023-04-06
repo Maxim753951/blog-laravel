@@ -33,19 +33,13 @@
                     @auth()
                         @if ( auth()->user()->role == 0)
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.main.index') }}">Me</a>
+                                <a class="nav-link" href="{{ route('admin.main.index') }}">Me (admin)</a>
                             </li>
                         @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('personal.main.index') }}">Me</a>
+                                    <a class="nav-link" href="{{ route('personal.main.index') }}">Me (personal)</a>
                                 </li>
                         @endif
-                        <li class="nav-item">
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <input class="btn btn-outline-primary" type="submit" value="Exit">
-                            </form>
-                        </li>
                     @endauth
                     {{--можно тернарным оператором--}}
                     @guest()

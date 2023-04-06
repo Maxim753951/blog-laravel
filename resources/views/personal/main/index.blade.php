@@ -30,14 +30,14 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>10{{-- $data['tagsCount'] --}}</h3>
+                            <h3>{{ $data['likesCount'] }}</h3>
 
                             <p>Liked posts</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-solid fa-heart"></i>
                         </div>
-                        <a href="{{ route('admin.tag.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('personal.liked.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -45,14 +45,14 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>10{{-- $data['usersCount'] --}}</h3>
+                            <h3>{{ $data['commentsCount'] }}</h3>
 
                             <p>Commented posts</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-solid fa-comment-dots"></i>
                         </div>
-                        <a href="{{ route('admin.user.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('personal.comment.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>

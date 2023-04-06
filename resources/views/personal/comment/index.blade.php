@@ -34,7 +34,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Title</th>
-                                    <th colspan="2" class="text-center">Do</th>
+                                    <th colspan="3" class="text-center">Do</th>
                                 </tr>
                                 </thead>
 
@@ -43,6 +43,7 @@
                                     <tr>
                                         <td>{{ $comment->id }}</td>
                                         <td>{{ $comment->message }}</td>
+                                        <td class="text-center"><a href="{{ route('post.show', $comment->post_id) }}"><i class="far fa-regular fa-eye"></i></a></td>
                                         <td class="text-center"><a href="{{ route('personal.comment.edit', $comment->id) }}" class="text-success"><i class="fas fa-solid fa-pen"></i></a></td>
                                         <td class="text-center">
                                             <form action="{{ route('personal.comment.delete', $comment->id) }}" method="POST">
